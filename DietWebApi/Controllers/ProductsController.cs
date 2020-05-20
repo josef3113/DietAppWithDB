@@ -42,7 +42,7 @@ namespace DietWebApi.Controllers
 
         [HttpPost]
         [Route("api/products/BelongProductsToUser/{i_UserId:int}")]
-        public void BelongProductsToUser(int i_UserId, List<int> i_ListIdsOfProducts)
+        public void BelongProductsToUser(int i_UserId, [FromBody] List<int> i_ListIdsOfProducts)
         {
             DBService.BelongProductsToUser(i_UserId, i_ListIdsOfProducts);
         }
